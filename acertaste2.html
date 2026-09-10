@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado - 2 de 5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Textura completa -->
+  <img src="IMG/textura.png" alt="Textura de fondo" class="background-texture">
+
+  <!-- Formas blandas multicolor -->
+  <img src="IMG/Blandadegradadamulticolor.png" alt="Blanda" class="liquid-shape bottom-left">
+  <img src="IMG/Blandaarribaizquierda.png" alt="Blanda superior derecha" class="liquid-shape top-right">
+
+  <!-- Contenedor principal de la pantalla -->
+  <div class="card-container card-transparent layout-quiz-screen">
+
+    <!-- Cabecera del Quiz -->
+    <div class="quiz-header">
+      <h1 class="quiz-main-title">Poné a prueba lo que aprendiste:</h1>
+      <p class="quiz-subtitle">Respondé las siguientes preguntas y descubrí cuánto recordás de la presentación.</p>
+    </div>
+
+    <!-- Contenedor tipo marco con borde degradado -->
+    <div class="quiz-gradient-box correct-box">
+      
+      <!-- Cerebro arriba a la derecha -->
+      <div class="brain-overlay-container">
+        <img src="IMG/cerebro.png" alt="Cerebro IA" class="brain-img-overlay">
+      </div>
+
+      <!-- Contenido del resultado -->
+      <div class="correct-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 15px;">
+        
+        <!-- Título ACERTASTE -->
+        <div class="stat-img-container" style="width: 280px; height: 60px;">
+          <img src="IMG/acertaste.png" alt="ACERTASTE" class="stat-circle-img">
+        </div>
+
+        <!-- Contenedor horizontal para puntaje separado: [2] [Línea] [5] -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 10px;">
+          
+          <!-- Imagen del número 2 -->
+          <div style="width: 70px; height: 90px; display: flex; align-items: center; justify-content: center;">
+            <img src="IMG/2.png" alt="2" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+
+          <!-- Línea separadora -->
+          <div style="width: 25px; height: 90px; display: flex; align-items: center; justify-content: center;">
+            <img src="IMG/linea.png" alt="Línea" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+
+          <!-- Imagen del total (5) -->
+          <div style="width: 70px; height: 90px; display: flex; align-items: center; justify-content: center;">
+            <img src="IMG/5.png" alt="5" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+
+        </div>
+
+        <!-- Botón para finalizar -->
+        <div class="correct-actions" style="margin-top: 15px;">
+          <a href="pagina16.html" class="action-pill-btn-center">FINALIZAR</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Barra de navegación inferior con flechas -->
+    <div class="navigation-bar">
+      <a href="pagina15.html" class="nav-btn prev-btn" title="Anterior">
+        <span>‹</span>
+      </a>
+      <div class="page-counter">
+        <span class="current-page">22</span>
+        <span class="separator">/</span>
+        <span class="total-pages">24</span>
+      </div>
+      <a href="pagina16.html" class="nav-btn next-btn" title="Reflexión Final">
+        <span>›</span>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

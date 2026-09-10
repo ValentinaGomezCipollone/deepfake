@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Pregunta 5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Textura completa -->
+  <img src="IMG/textura.png" alt="Textura de fondo" class="background-texture">
+
+  <!-- Formas blandas multicolor -->
+  <img src="IMG/Blandadegradadamulticolor.png" alt="Blanda" class="liquid-shape bottom-left">
+  <img src="IMG/Blandaarribaizquierda.png" alt="Blanda superior derecha" class="liquid-shape top-right">
+
+  <!-- Contenedor principal de la pantalla -->
+  <div class="card-container card-transparent layout-quiz-screen">
+
+    <!-- Cabecera del Quiz -->
+    <div class="quiz-header">
+      <h1 class="quiz-main-title">Poné a prueba lo que aprendiste:</h1>
+      <p class="quiz-subtitle">Respondé las siguientes preguntas y descubrí cuánto recordás de la presentación.</p>
+    </div>
+
+    <!-- Contenedor tipo marco con borde degradado -->
+    <div class="quiz-gradient-box">
+      
+      <!-- Estrellas independientes -->
+      <div class="estrellas-container">
+        <img src="IMG/estrella.png" alt="Estrellas" class="estrellas-img">
+      </div>
+
+      <!-- Círculo del número 5 -->
+      <div class="question-number-badge">5</div>
+
+      <!-- Cerebro montado sobre el borde superior derecho -->
+      <div class="brain-overlay-container">
+        <img src="IMG/cerebro.png" alt="Cerebro IA" class="brain-img-overlay">
+      </div>
+
+      <!-- Contenido de la pregunta 5 -->
+      <div class="quiz-content-row">
+        <div class="question-text-area">
+          <h2 class="question-title" style="font-size: 1.1rem; line-height: 1.35;">¿Qué porcentaje de personas considera que la creatividad humana sigue siendo esencial para la creación musical?</h2>
+          
+          <div class="options-list">
+            <a href="incorrecta5.html" class="quiz-option"><span class="opt-circle"></span> A) 74%</a>
+            <a href="incorrecta5.html" class="quiz-option"><span class="opt-circle"></span> B) 76%</a>
+            <a href="correcta5.html" class="quiz-option"><span class="opt-circle"></span> C) 79%</a>
+            <a href="incorrecta5.html" class="quiz-option"><span class="opt-circle"></span> D) 97%</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Barra de navegación inferior -->
+    <div class="navigation-bar">
+      <a href="pagina14.html" class="nav-btn prev-btn" title="Anterior">
+        <span>‹</span>
+      </a>
+      <div class="page-counter">
+        <span class="current-page">20</span>
+        <span class="separator">/</span>
+        <span class="total-pages">24</span>
+      </div>
+      <a href="#" class="nav-btn next-btn" title="Siguiente" style="opacity: 0.5; pointer-events: none;">
+        <span>›</span>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

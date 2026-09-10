@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Podes distinguir una voz real de una clonada? - Deepfake</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Textura completa -->
+  <img src="IMG/textura.png" alt="Textura de fondo" class="background-texture">
+
+  <!-- Forma blanda arriba a la derecha -->
+  <img src="IMG/Blandaarribaizquierda.png" alt="Blanda superior derecha" class="liquid-shape top-right">
+
+  <!-- Forma blanda abajo a la izquierda -->
+  <img src="IMG/Blandadegradadamulticolor.png" alt="Blanda inferior izquierda" class="liquid-shape bottom-left">
+
+  <!-- Contenedor principal transparente -->
+  <div class="card-container card-transparent layout-quiz">
+
+    <!-- Título superior centrado -->
+    <h1 class="quiz-title">¿Podes distinguir una voz real de una clonada?</h1>
+
+    <!-- Tarjeta del reproductor de audio -->
+    <div class="audio-card">
+      <h2 class="audio-subtitle">Escucha la voz y elegi</h2>
+
+      <div class="audio-player-content">
+        <!-- Botón de Play -->
+        <button id="play-btn" class="play-btn" title="Reproducir audio">
+          <span class="play-icon">▶</span>
+        </button>
+
+        <!-- Imagen unificada (Onda + Rostro) -->
+        <div class="player-illustration-container">
+          <img src="IMG/pantalla3.png" alt="Onda de sonido y rostro digital" class="player-illustration">
+        </div>
+      </div>
+
+      <!-- Botones de elección -->
+      <div class="options-container">
+        <button class="option-btn btn-humana">Humana</button>
+        <button class="option-btn btn-ia">IA</button>
+      </div>
+
+      <!-- Elemento de audio -->
+      <audio id="audio-sample" src="IMG/cancion.mp3"></audio>
+    </div>
+
+    <!-- Barra de navegación inferior -->
+    <div class="navigation-bar">
+      <a href="pagina2.html" class="nav-btn prev-btn" title="Anterior">
+        <span>‹</span>
+      </a>
+      <div class="page-counter">
+        <span class="current-page">03</span>
+        <span class="separator">/</span>
+        <span class="total-pages">24</span>
+      </div>
+      <a href="pagina4.html" class="nav-btn next-btn" title="Siguiente">
+        <span>›</span>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Cube - RAPERO - ACTOR</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Textura completa -->
+  <img src="IMG/textura.png" alt="Textura de fondo" class="background-texture">
+
+  <!-- Forma blanda -->
+  <img src="IMG/Blandaarribaderecha.png" alt="Blanda" class="liquid-shape top-left">
+
+  <!-- Contenedor principal -->
+  <div class="card-container card-transparent layout-sza-page">
+
+    <!-- Layout principal dividido en 2 columnas -->
+    <div class="sza-grid">
+      
+      <!-- Columna Izquierda: Perfil Ice Cube -->
+      <div class="sza-profile">
+        <div class="sza-avatar-container">
+          <img src="IMG/icecube.png" alt="Ice Cube" class="sza-avatar-img">
+        </div>
+        <div class="sza-name-tag">
+          <span class="sza-title">ICE CUBE</span>
+          <img src="IMG/eeuu.png" alt="EEUU" class="flag-icon">
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Bloques de Información -->
+      <div class="sza-info-column">
+        
+        <!-- Bloque 1: Iconos Profesión (Rapero y Actor) -->
+        <div class="info-card icons-card">
+          <div class="icon-circle"><img src="IMG/rap.png" alt="Rapero"></div>
+          <div class="icon-circle"><img src="IMG/actor.png" alt="Actor"></div>
+        </div>
+
+        <!-- Bloque 2: Vínculo con la IA (Termómetro) -->
+        <div class="info-card vinculo-card">
+          <div class="termometro-wrapper">
+            <img src="IMG/termometro.png" alt="Nivel de conflicto" class="termometro-img">
+          </div>
+          <span class="vinculo-text">Vínculo con la IA</span>
+          <div class="vinculo-avatar-wrapper">
+            <img src="IMG/michael.png" alt="IA" class="vinculo-avatar">
+          </div>
+        </div>
+
+        <!-- Bloque 3: Cita Interactiva con Slider -->
+        <div class="info-card quote-card">
+          <!-- Texto 1 -->
+          <p id="quote-1" class="quote-text active">
+            "Creo que la IA es demoníaca"
+          </p>
+          <!-- Texto 2 -->
+          <p id="quote-2" class="quote-text">
+            "Voy a demandar al que la haga y también a las plataformas que la reproduzcan"
+          </p>
+
+          <!-- Puntos del slider -->
+          <div class="slider-dots">
+            <button id="dot-1" class="dot active" title="Frase 1"></button>
+            <button id="dot-2" class="dot" title="Frase 2"></button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Botón Flotante Circular -->
+    <a href="pagina5.html" class="return-circle-btn" title="Volver a Algunas Declaraciones">
+      <span>Algunas<br>declaraciones</span>
+    </a>
+
+    <!-- Barra de navegación inferior -->
+    <div class="navigation-bar">
+      <a href="pagina7.html" class="nav-btn prev-btn" title="Anterior">
+        <span>‹</span>
+      </a>
+      <div class="page-counter">
+        <span class="current-page">09</span>
+        <span class="separator">/</span>
+        <span class="total-pages">24</span>
+      </div>
+      <a href="pagina9.html" class="nav-btn next-btn" title="Siguiente">
+        <span>›</span>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

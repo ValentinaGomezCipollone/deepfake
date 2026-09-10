@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflexión Final</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Textura completa -->
+  <img src="IMG/textura.png" alt="Textura de fondo" class="background-texture">
+
+  <!-- Formas blandas multicolor -->
+  <img src="IMG/Blandaarribaizquierda.png" alt="Blanda superior derecha" class="liquid-shape top-right">
+  <img src="IMG/Blandadegradadamulticolor.png" alt="Blanda inferior izquierda" class="liquid-shape bottom-left">
+
+  <!-- Contenedor principal de la pantalla -->
+  <div class="card-container card-transparent" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 20px;">
+
+    <!-- Título principal -->
+    <h1 style="color: #ff3399; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 2rem; text-align: center; margin-bottom: 10px; text-shadow: 0 0 10px rgba(255, 51, 153, 0.4);">
+      Reflexion Final
+    </h1>
+
+    <!-- Contenedor superior: Pregunta y onda de audio con perfil -->
+    <div class="quiz-gradient-box" style="width: 100%; max-width: 750px; min-height: 220px; display: flex; align-items: center; justify-content: space-between; padding: 25px; box-sizing: border-box; position: relative; overflow: hidden; border-radius: 15px; background: rgba(10, 10, 30, 0.6); border: 1.5px solid rgba(255, 255, 255, 0.1);">
+      
+      <!-- Texto de la pregunta -->
+      <div style="flex: 1; padding-right: 20px; z-index: 2;">
+        <p style="color: #ffffff; font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 600; line-height: 1.5; margin: 0;">
+          ¿Si un artista ya no puede dar su consentimiento, quién tiene derecho a decidir qué puede decir o cantar su voz?
+        </p>
+      </div>
+
+      <!-- Imagen lateral (Onda de audio y perfil del rostro) -->
+      <div style="width: 260px; display: flex; align-items: center; justify-content: center; z-index: 2; flex-shrink: 0;">
+        <img src="IMG/Rostrodigital.png" alt="Onda de voz y perfil" style="width: 100%; height: auto; object-fit: contain;">
+      </div>
+
+    </div>
+
+    <!-- Contenedor inferior unificado: Input de nombre + Caja de texto + Botón -->
+    <div style="width: 100%; max-width: 750px; background: rgba(10, 10, 25, 0.85); border: 1.5px solid rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 20px; box-sizing: border-box; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5); display: flex; flex-direction: column; gap: 15px;">
+      
+      <!-- Campo para el nombre o usuario -->
+      <input type="text" id="inputUsuario" placeholder="Escribe tu nombre o apodo..." style="width: 100%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; padding: 12px 15px; outline: none; color: #ffffff; font-family: 'Montserrat', sans-serif; font-size: 1rem; box-sizing: border-box;">
+
+      <!-- Campo para la reflexión -->
+      <textarea id="inputReflexion" placeholder="Escribe tu reflexión..." style="width: 100%; height: 75px; background: transparent; border: none; outline: none; color: #ffffff; font-family: 'Montserrat', sans-serif; font-size: 1rem; resize: none; box-sizing: border-box;"></textarea>
+      
+      <!-- Botón de envío -->
+      <button onclick="guardarYVerMural()" class="action-pill-btn-center" style="align-self: flex-end; cursor: pointer; border: none;">ENVIAR RESPUESTA</button>
+    </div>
+
+    <!-- Barra de navegación inferior con flechas -->
+    <div class="navigation-bar" style="position: relative; bottom: auto; left: auto; transform: none; margin-top: 1px;">
+      <a href="acertaste5.html" class="nav-btn prev-btn" title="Anterior">
+        <span>‹</span>
+      </a>
+      <div class="page-counter">
+        <span class="current-page">23</span>
+        <span class="separator">/</span>
+        <span class="total-pages">24</span>
+      </div>
+      <a href="pagina17.html" class="nav-btn next-btn" title="Siguiente">
+        <span>›</span>
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    function guardarYVerMural() {
+      let usuario = document.getElementById('inputUsuario').value.trim();
+      let texto = document.getElementById('inputReflexion').value.trim();
+      
+      if (usuario === "" || texto === "") {
+        alert("Por favor, completá tu nombre y tu reflexión antes de continuar.");
+        return;
+      }
+
+      // Recuperamos las respuestas anteriores o creamos un array vacío
+      let listaRespuestas = JSON.parse(localStorage.getItem('muralReflexiones')) || [];
+      
+      // Agregamos la nueva respuesta con el nombre que escribió el usuario
+      listaRespuestas.push({
+        usuario: usuario, 
+        texto: texto
+      });
+
+      // Guardamos de nuevo en localStorage
+      localStorage.setItem('muralReflexiones', JSON.stringify(listaRespuestas));
+
+      // Redirigimos al mural
+      window.location.href = 'pagina17.html';
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

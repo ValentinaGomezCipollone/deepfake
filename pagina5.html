@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algunas declaraciones - Deepfake</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Textura completa -->
+  <img src="IMG/textura.png" alt="Textura de fondo" class="background-texture">
+
+  <!-- Forma blanda arriba a la izquierda -->
+  <img src="IMG/Blandaarribaderecha.png" alt="Blanda superior izquierda" class="liquid-shape top-left">
+
+  <!-- Contenedor transparente -->
+  <div class="card-container card-transparent layout-mindmap">
+
+    <!-- Diagrama de red / Artistas -->
+    <div class="mindmap-container">
+      
+      <!-- Líneas conectoras vectoriales SVG ajustadas -->
+      <svg class="mindmap-lines" viewBox="0 0 1000 550">
+        <!-- Línea a Billie Eilish -->
+        <line x1="500" y1="275" x2="200" y2="140" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2" />
+        <!-- Línea a Ice Cube -->
+        <line x1="500" y1="275" x2="200" y2="410" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2" />
+        <!-- Línea a SZA (Arriba Derecha) -->
+        <line x1="500" y1="275" x2="680" y2="100" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2" />
+        <!-- Línea a Grimes (Abajo Derecha) -->
+        <line x1="500" y1="275" x2="680" y2="450" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2" />
+        <!-- Línea a David Guetta (Centro Derecha) -->
+        <line x1="500" y1="275" x2="850" y2="275" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2" />
+      </svg>
+
+      <!-- Círculo central -->
+      <div class="center-circle">
+        <span>Algunas<br>declaraciones</span>
+      </div>
+
+      <!-- Billie Eilish (Arriba Izquierda) -->
+<a href="pagina7.html" class="artist-node top-left-node" style="text-decoration: none;">
+  <div class="artist-circle">
+    <img src="IMG/billie.png" alt="Billie Eilish">
+  </div>
+  <div class="artist-info">
+    <h3>BILLIE EILISH</h3>
+    <p>VER DECLARACIÓN</p>
+  </div>
+</a>
+
+      <!-- Artista 2: SZA (Arriba Centro) -->
+      <a href="pagina6.html" class="artist-node top-center-node" style="text-decoration: none; cursor: pointer;">
+        <div class="artist-circle">
+          <img src="IMG/sza.png" alt="SZA">
+        </div>
+        <div class="artist-info">
+          <h3>SZA</h3>
+          <p>CANTANUTORA - ACTRIZ</p>
+        </div>
+      </a>
+
+      <!-- Artista 3: David Guetta (Derecha) -->
+      <a href="pagina10.html" class="artist-node right-node" style="text-decoration: none;">
+        <div class="artist-circle">
+          <img src="IMG/david.png" alt="David Guetta">
+        </div>
+        <div class="artist-info">
+          <h3>DAVID GUETTA</h3>
+          <p>VER DECLARACIÓN</p>
+        </div>
+      </a>
+
+      <!-- Grimes (Abajo Derecha) -->
+<a href="pagina9.html" class="artist-node bottom-right-node" style="text-decoration: none;">
+  <div class="artist-circle">
+    <img src="IMG/grimes.png" alt="Grimes">
+  </div>
+  <div class="artist-info">
+    <h3>GRIMES</h3>
+    <p>VER DECLARACIÓN</p>
+  </div>
+</a>
+
+      <!-- Ice Cube (Abajo Izquierda) -->
+<a href="pagina8.html" class="artist-node bottom-left-node" style="text-decoration: none;">
+  <div class="artist-circle">
+    <img src="IMG/icecube.png" alt="Ice Cube">
+  </div>
+  <div class="artist-info">
+    <h3>ICE CUBE</h3>
+    <p>VER DECLARACIÓN</p>
+  </div>
+</a>
+
+    </div>
+
+    <!-- Barra de navegación inferior -->
+    <div class="navigation-bar">
+      <a href="porcentaje.html" class="nav-btn prev-btn" title="Anterior">
+        <span>‹</span>
+      </a>
+      <div class="page-counter">
+        <span class="current-page">06</span>
+        <span class="separator">/</span>
+        <span class="total-pages">24</span>
+      </div>
+      <a href="pagina11.html" class="nav-btn next-btn" title="Siguiente">
+        <span>›</span>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

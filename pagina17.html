@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Voz de la Comunidad</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos específicos para la grilla estilo Padlet */
+    .mural-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 950px;
+      margin-top: 10px;
+      max-height: 62vh;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    .mural-card {
+      background: rgba(15, 15, 35, 0.75);
+      border: 1.5px solid #00d2ff;
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 140px;
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.15);
+      position: relative;
+    }
+    .mural-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
+    }
+    .mural-avatar {
+      width: 32px;
+      height: 32px;
+      background: #1a1a3a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #00d2ff;
+    }
+    .mural-user {
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .mural-text {
+      color: #ddddff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      margin: 0 0 10px 0;
+    }
+    .mural-star {
+      align-self: flex-end;
+      color: #ffcc00;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Textura completa -->
+  <img src="IMG/textura.png" alt="Textura de fondo" class="background-texture">
+
+  <!-- Formas blandas multicolor -->
+  <img src="IMG/Blandaarribaderecha.png" alt="Blanda" class="liquid-shape top-left">
+  <img src="IMG/Blandaarribaderecha.png" alt="Blanda inferior" class="stats-bottom-shape">
+
+  <!-- Contenedor principal de la pantalla -->
+  <div class="card-container card-transparent" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 25px 20px; box-sizing: border-box;">
+    
+    <!-- Título principal -->
+    <h1 style="color: #ff3399; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 2rem; margin-bottom: 15px; text-shadow: 0 0 10px rgba(255, 51, 153, 0.4);">
+      La Voz de la Comunidad
+    </h1>
+
+    <!-- Contenedor de tarjetas dinámicas (Padlet) -->
+    <div class="mural-grid" id="contenedorMural">
+      <!-- Las respuestas se inyectarán acá automáticamente -->
+    </div>
+
+    <!-- Barra de navegación inferior: Flecha para volver + Contador + Botón Reiniciar -->
+    <div style="width: 100%; max-width: 950px; display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+      
+      <!-- Flecha para volver a la página anterior -->
+      <a href="pagina16.html" class="page-counter" style="text-decoration: none; display: flex; align-items: center; gap: 8px; cursor: pointer;">
+        <span class="back-arrow" style="font-size: 1.1rem; color: #ff3399;">←</span>
+        <span class="current-page">24</span>
+        <span class="separator">/</span>
+        <span class="total-pages">24</span>
+      </a>
+
+      <!-- Botón de Reiniciar abajo a la derecha -->
+      <a href="index.html" class="action-pill-btn-center" style="padding: 8px 18px; font-size: 0.85rem; text-decoration: none; margin: 0;">
+        REINICIAR ⟲
+      </a>
+
+    </div>
+
+  </div>
+
+  <script>
+    // Al cargar la página, cargamos las reflexiones guardadas
+    window.onload = function() {
+      let contenedor = document.getElementById('contenedorMural');
+      let listaRespuestas = JSON.parse(localStorage.getItem('muralReflexiones')) || [];
+
+      // Tarjetas fijas de ejemplo
+      let ejemplosFijos = [
+        { usuario: "Martina.Dev", texto: "Nadie debería poder decidirlo. Sin el consentimiento explícito y en vida del artista, la voz no debería ser clonada." },
+      ];
+
+      // Unimos las fijas con las que el usuario vaya escribiendo
+      let totalTarjetas = [...ejemplosFijos, ...listaRespuestas];
+
+      contenedor.innerHTML = ""; // Limpiamos por las dudas
+
+      totalTarjetas.forEach(item => {
+        let tarjetaHTML = `
+          <div class="mural-card">
+            <div>
+              <div class="mural-card-header">
+                <div class="mural-avatar">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#00d2ff"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <span class="mural-user">${item.usuario}</span>
+              </div>
+              <p class="mural-text">"${item.texto}"</p>
+            </div>
+            <span class="mural-star">★</span>
+          </div>
+        `;
+        contenedor.innerHTML += tarjetaHTML;
+      });
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

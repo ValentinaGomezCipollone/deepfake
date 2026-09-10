@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Correcto Pregunta 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Textura completa -->
+  <img src="IMG/textura.png" alt="Textura de fondo" class="background-texture">
+
+  <!-- Forma blanda multicolor -->
+  <img src="IMG/Blandadegradadamulticolor.png" alt="Blanda" class="liquid-shape bottom-left">
+
+  <img src="IMG/Blandaarribaizquierda.png" alt="Blanda superior derecha" class="liquid-shape top-right">
+
+  <!-- Contenedor principal de la pantalla -->
+  <div class="card-container card-transparent layout-quiz-screen">
+
+    <!-- Cabecera del Quiz -->
+    <div class="quiz-header">
+      <h1 class="quiz-main-title">Poné a prueba lo que aprendiste:</h1>
+      <p class="quiz-subtitle">Respondé las siguientes preguntas y descubrí cuánto recordás de la presentación.</p>
+    </div>
+
+    <!-- Contenedor tipo marco con borde degradado -->
+    <div class="quiz-gradient-box correct-box">
+      
+      <!-- Estrellas y número 2 -->
+      <div class="quiz-top-left-group">
+        <div class="estrellas-container">
+          <img src="IMG/estrella.png" alt="Estrellas" class="estrellas-img">
+        </div>
+        <div class="question-number-badge">2</div>
+      </div>
+
+      <!-- Cerebro arriba a la derecha -->
+      <div class="brain-overlay-container">
+        <img src="IMG/cerebro.png" alt="Cerebro IA" class="brain-img-overlay">
+      </div>
+
+      <!-- Contenido del resultado correcto para la pregunta 2 -->
+      <div class="correct-content">
+        <!-- Cartel verde de Correcto -->
+        <div class="correct-badge">
+          <span>¡CORRECTO!</span>
+        </div>
+
+        <!-- Contenedor de la ilustración de Billie Eilish y la descripción al lado -->
+        <div class="stat-explanation-row">
+          <div class="artist-result-profile">
+            <div class="artist-result-avatar">
+              <img src="IMG/billie.png" alt="Billie Eilish">
+            </div>
+            <span class="artist-result-name">Billie Eilish</span>
+          </div>
+          <span class="stat-explanation-desc">fue la artista que firmó una carta abierta con la Artist Rights Alliance para frenar el avance de la IA</span>
+        </div>
+
+        <!-- Botón inferior único ("Siguiente pregunta") -->
+        <div class="correct-actions">
+          <a href="pagina13.html" class="action-pill-btn-center">SIGUIENTE PREGUNTA</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Barra de navegación inferior -->
+    <div class="navigation-bar">
+      <a href="pagina12.html" class="nav-btn prev-btn" title="Anterior">
+        <span>‹</span>
+      </a>
+      <div class="page-counter">
+        <span class="current-page">15</span>
+        <span class="separator">/</span>
+        <span class="total-pages">24</span>
+      </div>
+      <a href="pagina13.html" class="nav-btn next-btn" title="Siguiente">
+        <span>›</span>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+  // Sumamos 1 punto cada vez que acierta
+  let puntajeActual = parseInt(localStorage.getItem('puntajeQuiz')) || 0;
+  localStorage.setItem('puntajeQuiz', puntajeActual + 1);
+</script>
+</body>
+</html>

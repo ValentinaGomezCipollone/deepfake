@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué es y cómo darnos cuenta? - Deepfake</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Textura completa -->
+  <img src="IMG/textura.png" alt="Textura de fondo" class="background-texture">
+
+  <!-- Forma blanda para esquina superior izquierda -->
+  <img src="IMG/Blandaarribaderecha.png" alt="Blanda superior izquierda" class="liquid-shape top-left">
+
+  <!-- Forma blanda para esquina inferior derecha -->
+  <img src="IMG/Blandaabajoizquierda.png" alt="Blanda inferior derecha" class="liquid-shape bottom-right">
+
+  <!-- Contenedor transparente para la segunda pantalla -->
+  <div class="card-container card-transparent">
+
+    <!-- Contenido en dos columnas -->
+    <div class="content-wrapper">
+      
+      <!-- Columna izquierda -->
+      <div class="left-column info-page">
+        <h1 class="main-title">¿Que es y como darnos cuenta?</h1>
+
+        <p class="body-text-uppercase">
+          LA CLONACIÓN DE VOCES CON IA ANALIZA AUDIOS PARA REPLICAR DE FORMA IDÉNTICA EL TONO Y TIMBRE DE UNA PERSONA. AUNQUE LOS RESULTADOS SON IDÉNTICOS A LA VOZ REAL. PUEDES DETECTARLA SI ESCUCHAS SONIDOS RAROS DE FONDO, UN RITMO ROBÓTICO O LA FALTA DE PAUSAS PARA RESPIRAR.
+        </p>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="right-column">
+        <img src="IMG/quees.png" alt="Ilustración de robot y grabadora" class="illustration-img">
+      </div>
+
+    </div>
+
+    <!-- Barra de navegación inferior -->
+    <div class="navigation-bar">
+      <a href="index.html" class="nav-btn prev-btn" title="Anterior">
+        <span>‹</span>
+      </a>
+      <div class="page-counter">
+        <span class="current-page">02</span>
+        <span class="separator">/</span>
+        <span class="total-pages">24</span>
+      </div>
+      <a href="pagina3.html" class="nav-btn next-btn" title="Siguiente">
+        <span>›</span>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
